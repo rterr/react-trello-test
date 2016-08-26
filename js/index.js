@@ -21,7 +21,7 @@ var Card = function(props) {
 var List = function(props) {
     var myCards = [];
     for (var i=0; i<props.cards.length; i++) {
-        myCards.push(<Card text={props.cards[i]}/>);
+        myCards.push(<Card text={props.cards[i]} key={'card' + i}/>);
     }
 
     return (

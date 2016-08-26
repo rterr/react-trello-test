@@ -15,8 +15,9 @@ describe('Card component', function() {
         //This returns the rendered React component
         //Using this you can check out the type and props of the elements rendered by your component:
         var card = renderer.getRenderOutput();
-        //console.log("Card: ", card);
+        // console.log("Card: ", card);
         card.props.className.should.equal('card');
         card.props.children.should.equal(text);
+        card.type.should.equal('div');
     });
 });
