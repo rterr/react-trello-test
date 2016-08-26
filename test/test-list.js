@@ -16,6 +16,13 @@ describe('List component', function() {
         //This returns the rendered React component
         //Using this you can check out the type and props of the elements rendered by your component:
         var list = renderer.getRenderOutput();
-        console.log("List: ", list);
+        // console.log("List: ", list.props.children[1][0]);
+
+        list.props.className.should.equal('list');
+        list.props.children[0].props.className.should.equal('list-title');
+        list.props.children[0].props.children.should.equal('I am a list');
+        list.props.children[1][0].props.text.should.equal(cards[0]);
+        list.props.children[1][1].props.text.should.equal(cards[1]);
+        // card.props.children.should.equal(text);
     });
 });
